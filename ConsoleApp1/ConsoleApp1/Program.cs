@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -11,7 +7,29 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Console.ReadKey();
+            Console.WriteLine("Command Line Example");
+
+            // Check for null array
+            if (args == null)
+            {
+                Console.WriteLine("Array args is null");
+            }
+            else
+            {
+                Console.Write("args length is {0} \n", args.Length);
+
+                //Loop through array
+                for (int i = 0; i < args.Length; i++)
+                {
+                    string argument = args[i];
+
+                    Console.Write("args index is {0} ", i);
+                    Console.Write("args value is [{0}] \n", argument);
+                }
+            }
+
+            //Console.ReadLine();
         }
     }
 }
+
